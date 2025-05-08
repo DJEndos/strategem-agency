@@ -153,6 +153,27 @@ strong {
 .small-title {
   text-transform: uppercase;
 }
+.marquee{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.marquee{
+  background: var(--white-color);
+}
+#marquee-icon{
+  background: var(--primary-color);
+margin: 0;
+padding: 0;
+width: 40px;
+}
+.bi-headset{
+  margin: auto;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--white-color);
+}
 
 
 /*---------------------------------------

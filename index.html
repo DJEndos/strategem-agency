@@ -1,924 +1,571 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endosmile Tips - Betting Predictions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta name="description" content="">
+        <meta name="author" content="Tooplate">
+
+        <title>Stratagem.agency</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/magnific-popup.css" rel="stylesheet">
+
+        <link href="css/tooplate-waso-strategy.css" rel="stylesheet">
+        
+<!--
+
+Tooplate 2130 Waso Strategy
+
+https://www.tooplate.com/view/2130-waso-strategy
+
+Free Bootstrap 5 HTML Template
+
+-->
+
+    </head>
     
-    <!-- Material Icons CDN -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <style>
-        :root {
-            --primary-color: #003554;
-            --secondary-color: #00A6FB;
-        }
+    <body id="section_1">
 
-        .navbar-custom {
-            background-color: var(--primary-color) !important;
-        }
+        <header class="site-header">
+            <div class="container">
+                <div class="row align-items-center">
 
-        .text-custom {
-            color: var(--secondary-color) !important;
-        }
+                    <div class="col-lg-3 col-md-5 col-7">
+                        <p class="text-white mb-0">
+                            <i class="bi-clock site-header-icon me-2"></i>
+                            Mon-Fri 10:00-19:00
+                        </p>
+                    </div>
 
-        .sidebar {
-            width: 250px;
-            position: fixed;
-            top: 56px;
-            left: -250px;
-            height: calc(100vh - 56px);
-            background-color: #f8f9fa;
-            transition: all 0.3s;
-            overflow-y: auto;
-            z-index: 1000;
-        }
+                    <div class="col-lg-2 col-md-3 col-5">
+                        <p class="text-white mb-0">
+                            <a href="tel: 0902495502" class="text-white">
+                                <i class="bi-telephone site-header-icon me-2"></i>
+                                0902495502
+                            </a>
+                        </p>
+                    </div>
 
-        .sidebar.active {
-            left: 0;
-        }
+                    <div class="col-lg-3 col-md-3 col-12 ms-auto">
+                        <ul class="social-icon">
+                            <li><a href="" class="social-icon-link bi-facebook"></a></li>
 
-        .main-content {
-            margin-left: 0;
-            transition: all 0.3s;
-        }
+                            <li><a href="" class="social-icon-link bi-linkedin"></a></li>
 
-        .main-content.active {
-            margin-left: 250px;
-        }
+                            <li><a href="" class="social-icon-link bi-twitter"></a></li>
 
-        .overlay {
-            position: fixed;
-            top: 56px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            display: none;
-        }
+                            <li><a href="" class="social-icon-link bi-whatsapp"></a></li>
+                        </ul>
+                    </div>
 
-        .overlay.active {
-            display: block;
-        }
-
-        .prediction-card {
-            transition: all 0.3s;
-        }
-
-        .prediction-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .live-badge {
-            animation: pulse 1.5s infinite;
-        }
-        .fa-check-circle{
-
-        color: green;
-        }
-
-        @keyframes pulse {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.5;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler me-2" type="button" id="sidebarToggle">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand fw-bold text-custom" href="#">Endosmile Tips</a>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <!-- <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-custom" href="#"><i class="fas fa-home me-1"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-custom" href="#"><i class="fas fa-chart-line me-1"></i> Stats</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-custom" href="#"><i class="fas fa-user me-1"></i> Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-custom" href="#"><i class="fas fa-question-circle me-1"></i> Help</a>
-                    </li>
-                </ul>
+                </div>
             </div>
-        </div> -->
-    </nav>
+        </header>
 
-    <!-- Sidebar -->
-    <div class="sidebar shadow">
-        <div class="sidebar-header p-3 border-bottom">
-            <h5 class="mb-0">Menu</h5>
-        </div>
-        <ul class="list-unstyled ps-0">
-            <li class="mb-1">
-                <button class="btn btn-toggle align-items-center rounded collapsed w-100 text-start"
-                    data-bs-toggle="collapse" data-bs-target="#sports-collapse">
-                    <i class="fas fa-futbol me-2"></i> Sports
+        <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+            <div class="container">
+
+                <a href="#" class="navbar-brand">StrateGem <span class="text-danger">Agency</span></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse" id="sports-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="/index.2.html" class="link-dark rounded" data-sport="football"><i
-                                    class="fas fa-futbol me-2"></i> Football</a></li>
-                        <li><a href="#" class="link-dark rounded" data-sport="basketball"><i
-                                    class="fas fa-basketball-ball me-2"></i> Basketball</a></li>
-                        <li><a href="#" class="link-dark rounded" data-sport="tennis"><i
-                                    class="fas fa-table-tennis me-2"></i> Tennis</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn btn-toggle align-items-center rounded collapsed w-100 text-start"
-                    data-bs-toggle="collapse" data-bs-target="#predictions-collapse">
-                    <i class="fas fa-chart-pie me-2"></i> Predictions
-                </button>
-                <div class="collapse" id="predictions-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-dark rounded" data-type="today"><i
-                                    class="fas fa-calendar-day me-2"></i> Today</a></li>
-                        <li><a href="#" class="link-dark rounded" data-type="tomorrow"><i
-                                    class="fas fa-calendar-alt me-2"></i> Tomorrow</a></li>
-                        <li><a href="#" class="link-dark rounded" data-type="live"><i class="fas fa-bolt me-2"></i>
-                                Live</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <a href="#" class="btn btn-toggle align-items-center rounded w-100 text-start">
-                    <i class="fas fa-star me-2"></i> VIP Tips
-                </a>
-            </li>
-            <li class="mb-1">
-                <a href="#" class="btn btn-toggle align-items-center rounded w-100 text-start">
-                    <i class="fas fa-history me-2"></i> History
-                </a>
-            </li>
-            <li class="mb-1">
-                <a href="#" class="btn btn-toggle align-items-center rounded w-100 text-start">
-                    <i class="fas fa-cog me-2"></i> Settings
-                </a>
-            </li>
-            <li class="border-top my-3"></li>
-            <li class="mb-1">
-                <a href="#" class="btn btn-toggle align-items-center rounded w-100 text-start">
-                    <i class="fas fa-sign-out-alt me-2"></i> Logout
-                </a>
-            </li>
-        </ul>
-    </div>
 
-    <!-- Overlay -->
-    <div class="overlay"></div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1"><small class="small-title"><strong class="text-warning">01</strong></small> Home</a>
+                        </li>
 
-    <!-- Main Content -->
-    <div class="main-content container-fluid mt-5 pt-4">
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="fw-bold">Today's Predictions</h2>
-                    <div>
-                       <a href="/index.html">
-                         <button class="btn btn-sm btn-outline-primary me-2" id="refreshBtn">
-                            <i class="fas fa-sync-alt me-1"></i> Refresh
-                        </button>
-                       </a>
-                        <div class="btn-group">
-                            <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown">
-                                Filter by Sport
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item filter-sport" href="#" data-sport="all">All Sports</a></li>
-                                <li><a class="dropdown-item filter-sport" href="#" data-sport="football">Football</a>
-                                </li>
-                                <li><a class="dropdown-item filter-sport" href="#"
-                                        data-sport="basketball">Basketball</a></li>
-                                <li><a class="dropdown-item filter-sport" href="#" data-sport="tennis">Tennis</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2"><small class="small-title"><strong class="text-warning">02</strong></small> About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3"><small class="small-title"><strong class="text-warning">03</strong></small> Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4"><small class="small-title"><strong class="text-warning">04</strong></small> Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5"><small class="small-title"><strong class="text-warning">05</strong></small> Contact</a>
+                        </li>
+                    </ul>
+                <div>
+                        
+            </div>
+        </nav>
+       <nav class="marquee d-flex">
+        <i class="bi bi-headset" id="marquee-icon"> </i>
+        <marquee behavior="scroll" direction="left" scrollamout="1" hight="20"> We're thrilled to announce that [StrateGem Agency
+
+            ] is officially OPEN FOR SALE! 🚀
+
+            After months of hard work, dedication, and innovation, we're excited to offer this fully functional, high-quality website to the right buyer. Whether you're an entrepreneur, business owner, or investor, this is a fantastic opportunity to own a ready-to-go digital asset. </marquee>
+       </nav>
+
+        <main>
+
+            <section class="hero">
+                <div class="container-fluid h-100">
+                    <div class="row h-100">
+
+                        <div id="carouselExampleCaptions" class="carousel carousel-fade hero-carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="container position-relative h-100">
+                                        <div class="carousel-caption d-flex flex-column justify-content-center">
+                                            <small class="small-title">Introducing StrateGem  Agency <strong class="text-warning">01/05</strong></small>
+
+                                            <h1>Explore <span class="text-warning">new ideas</span> for your business</h1>
+
+                                            <div class="d-flex align-items-center mt-4">
+                                                <a class="custom-btn btn custom-link" href="#section_2">Get Started</a>
+
+                                                <a class="popup-youtube custom-icon d-flex ms-4" href="">
+                                                    <i class="bi-play play-icon d-flex m-auto text-white"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-image-wrap">
+                                        <img src="images/slide/andreea-avramescu-uQM4Vk6F_7o-unsplash.jpg" class="img-fluid carousel-image" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="container position-relative h-100">
+                                        <div class="carousel-caption d-flex flex-column justify-content-center">
+                                            <small class="small-title">Supporting New Project <strong class="text-warning">01/05</strong></small>
+
+                                            <h1>Strategic Planning for your <span class="text-warning">next project</span></h1>
+
+                                            <div class="d-flex align-items-center mt-4">
+                                                <a class="custom-btn btn custom-link" href="#section_2">Explore Capabilities</a>
+
+                                                <a class="popup-youtube custom-icon d-flex ms-4" href="">
+                                                    <i class="bi-play play-icon d-flex m-auto text-white"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="carousel-image-wrap">
+                                        <img src="images/slide/windows-p74ndnYWRY4-unsplash.jpg" class="img-fluid carousel-image" alt="">
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="about section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                            <div class="about-image-wrap h-100">
+                                <img src="images/bave-pictures-JMECOx0uY3o-unsplash.jpg" class="img-fluid about-image" alt="">
+
+                                <div class="about-image-info">
+                                    <h4 class="text-white">William Smith, CEO</h4>
+
+                                    <p class="text-white mb-0">Mr. William build this empire from scratch. Today he is one of the most influential business expert anyone can 
+                                        ever think of!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 d-flex flex-column">
+                            <div class="about-thumb bg-white shadow-lg">
+                                
+                                <div class="about-info">
+                                    <small class="small-title">About <strong class="text-warning">02/05</strong></small>
+
+                                    <h2 class="mb-3">StrateGem Consulting Agency</h2>
+
+                                    <h5 class="mb-3">Helping small businesses since 2001</h5>
+
+                                    <p>StrateGem Agency is a dynamic business consulting firm specializing in strategic planning, growth optimization, and operational efficiency for businesses across various industries. The agency provides tailored solutions, including market research, financial analysis, digital transformation, and process improvement, to help clients achieve sustainable success. <a href="">contact page</a>. Thank you.</p>
+                                </div>
+                            </div>
+
+                            <div class="row h-100">
+                                <div class="col-lg-6 col-6">
+                                    <div class="about-thumb d-flex flex-column justify-content-center bg-danger mb-lg-0 h-100">
+                                        
+                                        <div class="about-info">
+                                            <h5 class="text-white mb-4">We're growing business dolor</h5>
+
+                                            <a class="custom-btn btn custom-bg-primary" href="#section_3">Join us</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-6">
+                                    <div class="about-thumb d-flex flex-column justify-content-center bg-warning mb-lg-0 h-100">
+                                        
+                                        <div class="about-info">
+                                            <h5 class="text-white mb-4">How did you  know about us?</h5>
+
+                                            <p class="text-white mb-0">Let us know how you got to know about us <a class="custom-btn btn custom-bg-light mt-3" href="#">Tell us</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="services section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 text-center mx-auto mb-5">
+                            <small class="small-title">Services <strong class="text-warning">03/05</strong></small>
+
+                            <h2>How can we help you?</h2>
+
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <nav>
+                                <div class="nav nav-tabs flex-column align-items-baseline" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-business-tab" data-bs-toggle="tab" data-bs-target="#nav-business" type="button" role="tab" aria-controls="nav-business" aria-selected="true">
+                                        <h3>Business Consulting</h3>
+
+                                        <span>Business consulting provides expert advice to improve performance, solve problems, and drive growth for organizations.</span>
+                                    </button>
+
+                                    <button class="nav-link" id="nav-strategy-tab" data-bs-toggle="tab" data-bs-target="#nav-strategy" type="button" role="tab" aria-controls="nav-strategy" aria-selected="false">
+                                        <h3>Strategy Planning</h3>
+                                        
+                                        <span>Strategy planning defines goals, allocates resources, and outlines steps to achieve long-term organizational success efficiently.</span>
+                                    </button>
+
+                                    <button class="nav-link" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-video" type="button" role="tab" aria-controls="nav-video" aria-selected="false">
+                                        <h3>Video Content</h3>
+                                        
+                                        <span>Video content boosts engagement, simplifies complex ideas, and enhances trust in business consultation services.</span>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-business" role="tabpanel" aria-labelledby="nav-intro-tab">
+                                    <img src="images/services/young-entrepreneurs-discussing-project.webp" class="img-fluid" alt="">
+
+                                    <h5 class="mt-4 mb-2">Introduction to Business Consulting</h5>
+
+                                    <p>Business consulting involves providing expert advice to organizations to help them improve performance, solve problems, and achieve growth. Consultants analyze business operations, identify inefficiencies, and recommend strategies for improvement.</p>
+
+                                    <ul>
+                                        <li>Helping small businesses</li>
+
+                                        <li>Business ideas and scopes</li>
+
+                                        <li>Business Strategy and Management</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-pane fade show" id="nav-strategy" role="tabpanel" aria-labelledby="nav-strategy-tab">
+                                    <img src="images/services/startup-leader-drawing-flowchart-board-discussing-project.jpg" class="img-fluid" alt="">
+
+                                    <h5 class="mt-4 mb-2">Strategy Planning</h5>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade show" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
+                                    <img src="images/services/portrait-smiling-african-american-young-woman-holding-movie-production-blackboard.jpg" class="img-fluid" alt="">
+
+                                    <h5 class="mt-4 mb-2">Video Content</h5>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects section-padding pb-0" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 text-center mx-auto mb-5">
+                            <small class="small-title">Projects <strong class="text-warning">04/05</strong></small>
+
+                            <h2>Brands we've crafted so far</h2>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="projects-thumb projects-thumb-small">
+                                <a href="project-detail.html">
+                                    <img src="images/projects/lonely street.avif" class="img-fluid projects-image" alt="">
+                                    
+                                    <div class="projects-info">
+                                        <div class="projects-title-wrap">
+                                            <small class="projects-small-title">Business</small>
+
+                                            <h2 class="projects-title">MCL Group</h2>
+                                        </div>
+
+                                        <div class="projects-btn-wrap mt-4">
+                                            <span class="custom-btn btn">
+                                                <i class="bi-arrow-right"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="projects-thumb projects-thumb-small">
+                                <a href="project-detail.html">
+                                    <img src="images/projects/ambassadors.webp" class="img-fluid projects-image" alt="">
+                                    
+                                    <div class="projects-info">
+                                        <div class="projects-title-wrap">
+                                            <small class="projects-small-title">Strategy Planning</small>
+
+                                            <h2 class="projects-title">Fendis</h2>
+                                        </div>
+
+                                        <div class="projects-btn-wrap mt-4">
+                                            <span class="custom-btn btn" href="project-detail.html">
+                                                <i class="bi-arrow-right"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="projects-thumb projects-thumb-small">
+                                <a href="project-detail.html">
+                                    <img src="images/projects/crypto-trade.avif" class="img-fluid projects-image" alt="">
+                                    
+                                    <div class="projects-info">
+                                        <div class="projects-title-wrap">
+                                            <small class="projects-small-title">Video Content</small>
+
+                                            <h2 class="projects-title">CBEX</h2>
+                                        </div>
+
+                                        <div class="projects-btn-wrap mt-4">
+                                            <span class="custom-btn btn" href="project-detail.html">
+                                                <i class="bi-arrow-right"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 col-12">
+                            <div class="projects-thumb projects-thumb-large">
+                                <a href="project-detail.html">
+                                    <img src="images/projects/conference-room.avif" class="img-fluid projects-image" alt="">
+                                    
+                                    <div class="projects-info">
+                                        <div class="projects-title-wrap">
+                                            <small class="projects-small-title">Video Content</small>
+
+                                            <h2 class="projects-title">Conference</h2>
+                                        </div>
+
+                                        <div class="projects-btn-wrap mt-4">
+                                            <span class="custom-btn btn" href="project-detail.html">
+                                                <i class="bi-arrow-right"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="projects-thumb projects-thumb-small">
+                                <a href="project-detail.html">
+                                    <img src="images/projects/consultation-team.avif" class="img-fluid projects-image" alt="">
+                                    
+                                    <div class="projects-info">
+                                        <div class="projects-title-wrap">
+                                            <small class="projects-small-title">Business</small>
+
+                                            <h2 class="projects-title">TradeGO</h2>
+                                        </div>
+
+                                        <div class="projects-btn-wrap mt-4">
+                                            <span class="custom-btn btn" href="project-detail.html">
+                                                <i class="bi-arrow-right"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact" id="section_5">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9c10b" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+                <div class="contact-container-wrap">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-6 col-12">
+                                <form class="custom-form contact-form" action="" method="post" role="form">
+                                    <small class="small-title">Contact <strong class="text-white">05/05</strong></small>
+
+                                    <h2 class="mb-5">Say Hi to us</h2>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">                                    
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required="">
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-6 col-12">         
+                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@company.com" required="">
+                                        </div>
+
+                                        <div class="col-12">
+                                            <textarea class="form-control" rows="7" id="message" name="message" placeholder="Message"></textarea>
+
+                                            <button type="submit" class="form-control">Submit</button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="contact-thumb">
+                                    
+                                    <div class="contact-info bg-white shadow-lg">
+                                        <h4 class="mb-4">123 Calvary St, Woji, PH </h4>
+
+                                        <h4 class="mb-2">
+                                            <a href="tel: 9092495502">
+                                                <i class="bi-telephone contact-icon me-2"></i>
+                                                +234 9092495502
+                                            </a>
+                                        </h4>
+
+                                        <h5>
+                                            <a href="mailto:Kammapanasonic@gmail.com" class="footer-link">
+                                                <i class="bi-envelope-fill contact-icon me-2"></i>
+                                                Kammapanasonic@gmail.com
+                                            </a>
+                                        </h5>
+                                        
+                                        <!-- Copy "embed a map" HTML code from any point on Google Maps -> Share Link  -->
+                                        
+                                        <iframe class="google-map mt-4" src="https://www.google.com/maps/embed/v1/place?q=Port%20Harcourt&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                        
+                    <div class="col-lg-6 col-12">
+                        <div class="site-footer-wrap d-flex align-items-center">
+                            <p class="copyright-text mb-0 me-4">Copyright © 2025 StrateGem Agency, Ltd.</p>
+
+                            <ul class="social-icon">
+                                <li><a href="https://facebook.com/tooplate" class="social-icon-link bi-facebook"></a></li>
+
+                                <li><a href="https://pinterest.com/tooplate" class="social-icon-link bi-pinterest"></a></li>
+    
+                                <li><a href="https://twitter.com/minthu" class="social-icon-link bi-twitter"></a></li>
+    
+                                <li><a href="https://www.youtube.com/tooplate" class="social-icon-link bi-youtube"></a></li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Live Predictions Section -->
-                <div class="card mb-4 border-primary">
-                    <div class="card-header bg-primary text-white">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0"><i class="fas fa-bolt me-2"></i> Safe 2+ odds Predictions | <span>Fri, 18 May.</span></h5>
-                            <span class="badge bg-danger live-badge">LIVE</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row" id="livePredictionsContainer">
-                            <!-- Live predictions will be loaded here -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Upcoming Predictions Section -->
-                <div class="card mb-4">
-                    <div class="card-header bg-secondary text-white">
-                        <h5 class="mb-0"><i class="fas fa-calendar-day me-2"></i> Upcoming Predictions | <span>Sat, 18 May.</span></h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row" id="upcomingPredictionsContainer">
                             
                         </div>
                     </div>
-                </div>
-
-                <!-- Statistics Section -->
-                <div class="card mb-4">
-                    <div class="card-header bg-info text-white">
-                        <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i> Performance Statistics</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <div class="card bg-success bg-opacity-10">
-                                    <div class="card-body text-center">
-                                        <h3 class="text-success">78%</h3>
-                                        <p class="mb-0">Win Rate</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <div class="card bg-primary bg-opacity-10">
-                                    <div class="card-body text-center">
-                                        <h3 class="text-primary">24</h3>
-                                        <p class="mb-0">Winning Streak</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <div class="card bg-warning bg-opacity-10">
-                                    <div class="card-body text-center">
-                                        <h3 class="text-warning">3.2x</h3>
-                                        <p class="mb-0">Average Odds</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5>Endosmile Tips</h5>
-                    <p>Professional betting predictions with high accuracy rates.</p>
-                    <div class="social-icons">
-                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-telegram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Home</a></li>
-                        <li><a href="#" class="text-white">Predictions</a></li>
-                        <li><a href="#" class="text-white">VIP Tips</a></li>
-                        <li><a href="#" class="text-white">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Contact</h5>
-                    <ul class="list-unstyled">
-                        <a href="mailto:Kammapanasonic@gmail.com"><li><i class="fas fa-envelope me-2"></i> support@endosmile.com</li></a>
-                       <a href="tel:+2349092495502"> <li><i class="fas fa-phone me-2"></i> +234 9092495502</li></a>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-0">&copy; 2025 Endosmile Tips. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Prediction Modal -->
-    <div class="modal fade" id="predictionModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="predictionModalTitle">Prediction Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="predictionModalBody">
-                    <!-- Prediction details will be loaded here -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-   
-        
-       
-        // Simulated database
-       
-        const predictionsDatabase = {
-            live: [
-                { 
-                    id: 1,
-                    sport: 'football',
-                    league: 'Hungary - NB I',
-                    teams: 'Ferencvarosi TC vs Fehervar FC',
-                    prediction: 'Home Win ',
-                    outcome: ' <i class="bi bi-clock-history "></i>',
-                    odds:  1.27 ,
-                    confidence: 'High',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-18T18:30:00'),
-                    analysis: 'Ferencvarosi TC is currently 2nd on the table and they have won 3 of their last 5 games, draw 2. Fehervar FC is occupying the 10th position and have not won any of their last 5 games.'
-                },
-                {
-                    id: 2,
-                    sport: 'Football',
-                    league: 'Italy - Serie A',
-                    teams: 'Juventus vs Udinese',
-                    prediction: 'Home Win',
-                    outcome: ' <i class="bi bi-clock-history "></i>',
-                    odds: 1.42,
-                    confidence: 'Medium',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T21:45:00'),
-                    analysis: 'Juventus occupies 4th position, current form: DDWLW. on the away side Udinese have won just 1 match, lost 3, and draw 1.',
-                },
-                {
-                    id: 3,
-                    sport: 'Football',
-                    league: 'Estonia - Meistriliiga',
-                    teams: 'Kalju Nomme vs Kuressaare',
-                    prediction: 'Away Win',
-                    outcome: '  <i class="bi bi-clock-history "></i>',
-                    odds: 1.28,
-                    confidence: 'High',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T19:00:00'),
-                    analysis: 'Kalju Nomme are tremendously on a winning streak with 5 straight wins, and sitting 3rd on the table. While Kuressaare are sitting 8th on the table, their current form: WDWLW.'
-                }
-            ],
-            upcoming: [
-                {
-                    id: 4,
-                    sport: 'football',
-                    league: 'Spain - La Liga',
-                    teams: 'Barcelona  vs Villareal',
-                    prediction: 'Home win',
                     
-                    odds: 1.90,
-                    confidence: 'Very High',
-                    outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date ('2025-05-17T18:00:00'), 
-                    analysis: 'Following a 2-0 win over city rivals Espanyol to clinch the 28th La Liga title in club history and a domestic treble for the 2024-25 season, Barcelona welcome Villarreal for the Blaugrana’s home finale at the Montjuïc Olympic Stadium on Sunday evening.Villarreal, though, have a completely different mindset: the Yellow Submarine need three points to secure a Top 5 finish and a spot in next season’s Champions League, and coach Marcelino García Toral and his players will definitely bring a ton of urgency and intensity to the contest and hope to take advantage of a Barça team that probably won’t play at 100%.  '
-                },
-                {
-                    id: 5,
-                    sport: 'football',
-                    league: 'Turkey - Super Liga',
-                    teams: 'Galatasaray vs Kayserispor',
-                    prediction: 'Home Win',
-                    odds: 1.17,
-                    confidence: 'Medium',
-                    outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T20:19:00'), 
-                    analysis: 'Galatasaray is currently at top of the league with 86 pts, won all their last 5 games; on the other hand Kayserispor is  at the 11th position on the table, played 26 games won just 4 draw 7 and lost 17'
-                },
-                {
-                    id: 6,
-                    sport: 'football',
-                    league: 'Turkey - Super Liga',
-                    teams: 'Fenerbahce vs Eyupspor',
-                    prediction: 'Home win or draw',
-                    odds: 1.25,
-                    confidence: 'High',
-                    outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T17:00:00'), 
-                    analysis: 'Fenerbahce are currently sitted at 2nd position on the table, and they havde won 3 of their last 5 games, lost 1 and draw 1. Eyupspor only won 1 out of 5 games and lost 4.  '
-                },
-                {
-                    id: 7,
-                    sport: 'football',
-                    league: 'Azerbaijan - Premyer Liga',
-                    teams: 'Qarabag vs Kapaz',
-                    prediction: 'Home win',
-                    odds: 1.18,
-                    confidence: 'High',
-                   outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T16:00:00'),
-                    analysis: 'Qarabag are already dominant of the league table, and  have won 4 of  their last 5 games; Kapaz won 1, lost 2, and draw 2.'
-                },
-                   {
-                    id: 8,
-                    sport: 'football',
-                    league: 'Netherlands - Eredisie',
-                    teams: 'Sparta Rotterdam vs PSV Eindhoven ',
-                    prediction: 'PSV Eindhoven and over 1.5',
-                    odds: 1.27,
-                    confidence: 'High',
-                   outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T13:30:00'),
-                    analysis: 'SHANGHAI SIPG form: WWLWL, they occupy 4th position on the table, Shangdong Lunemg form is WLDLL and they take up the 5th place on the table.  '
-                },
+                    <div class="col-lg-6 col-12">
+                    	<p class="copyright-text mb-0 me-4">StrateGem Agency
 
-               {
-                    id: 9,
-                    sport: 'football',
-                    league: 'Netherlands - Eredisie',
-                    teams: ' AZ Alkmaar vs Almere City FC',
-                    prediction: 'Home win',
-                    odds: 1.25,
-                    confidence: 'High',
-                   outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T13:30:00'), 
-                    analysis: 'AZ Alkmaar have won first 3 of their 5 games and draw 2; as they occupy the 5th position on the league table. While Reims are at the 14th position with LLDWW form.'
-                },
-
-                           {
-                    id: 10,
-                    sport: 'football',
-                    league: 'Netherlands - Eredisie',
-                    teams: 'Heerenveen vs Feynoord',
-                    prediction: 'over 2.5 goals',
-                    odds: 1.44,
-                    confidence: 'High',
-                   outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T13:30:00'), 
-                    analysis: 'Feynoord won 4/5 of their last 5, and lost only 1. However they are at 3rd place on the table. Heerenveen are at 9th place place with LLWWL form.   '
-                },
-
-                        {
-                    id: 10,
-                    sport: 'football',
-                    league: 'Netherlands - Eredisie',
-                    teams: 'Ajax vs Twente',
-                    prediction: 'over 2.5 goals',
-                    odds: 1.36,
-                    confidence: 'High',
-                   outcome: '  <i class="bi bi-clock-history "></i>',
-                    status: 'Not started <i class="bi bi-clock "></i>' ,
-                    startTime: new Date('2025-05-17T13:30:00'), 
-                    analysis: 'Ajax are currently 2nd on the league table and have won just one of their last 5, lost 2, drew 2. they are not really in form this time. While Twente are at 6th place with LWWLD form.   '
-                }
-            ]
-        };
-
-        // DOM Elements
-        const sidebar = document.querySelector('.sidebar');
-        const sidebarToggle = document.getElementById('sidebarToggle');
-        const overlay = document.querySelector('.overlay');
-        const mainContent = document.querySelector('.main-content');
-        const livePredictionsContainer = document.getElementById('livePredictionsContainer');
-        const upcomingPredictionsContainer = document.getElementById('upcomingPredictionsContainer');
-        const refreshBtn = document.getElementById('refreshBtn');
-        const filterSportButtons = document.querySelectorAll('.filter-sport');
-        const predictionModal = new bootstrap.Modal(document.getElementById('predictionModal'));
-        const predictionModalTitle = document.getElementById('predictionModalTitle');
-        const predictionModalBody = document.getElementById('predictionModalBody');
-        
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function () {
-            loadPredictions();
-
-            // Simulate live updates every 30 seconds
-            setInterval(updateLivePredictions, 30000);
-        });
-
-        // Toggle sidebar
-        sidebarToggle.addEventListener('click', function () {
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-            mainContent.classList.toggle('active');
-        });
-
-        // Close sidebar when clicking on overlay
-        overlay.addEventListener('click', function () {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-            mainContent.classList.remove('active');
-        });
-
-        // Refresh predictions
-        refreshBtn.addEventListener('click', function () {
-            // Show loading state
-            refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Refreshing';
-            refreshBtn.disabled = true;
-
-            // Simulate network delay
-            setTimeout(function () {
-                loadPredictions();
-                refreshBtn.innerHTML = '<i class="fas fa-sync-alt me-1"></i> Refresh';
-                refreshBtn.disabled = false;
-
-                // Show toast notification
-                showToast('Predictions updated successfully!', 'success');
-            }, 1000);
-        });
-
-        // Filter predictions by sport
-        filterSportButtons.forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.preventDefault();
-                const sport = this.getAttribute('data-sport');
-                filterPredictionsBySport(sport);
-
-                // Update active state
-                filterSportButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // Load predictions
-        function loadPredictions() {
-            renderLivePredictions(predictionsDatabase.live);
-            renderUpcomingPredictions(predictionsDatabase.upcoming);
-        }
-
-        // Render live predictions
-        function renderLivePredictions(predictions) {
-            livePredictionsContainer.innerHTML = '';
-
-            if (predictions.length === 0) {
-                livePredictionsContainer.innerHTML = `
-                    <div class="col-12 text-center py-4">
-                        <i class="fas fa-info-circle fa-2x mb-2 text-muted"></i>
-                        <p class="text-muted">No live predictions at the moment. Check back later!</p>
+                            HTML Template is designed by <a href="" target="_blank">Endosmile-Techhub</a></p>
                     </div>
-                `;
-                return;
-            }
 
-            predictions.forEach(prediction => {
-                const card = createPredictionCard(prediction, true);
-                livePredictionsContainer.appendChild(card);
-            });
-        }
-
-        // Render upcoming predictions
-        function renderUpcomingPredictions(predictions) {
-            upcomingPredictionsContainer.innerHTML = '';
-
-            if (predictions.length === 0) {
-                upcomingPredictionsContainer.innerHTML = `
-                    <div class="col-12 text-center py-4">
-                        <i class="fas fa-info-circle fa-2x mb-2 text-muted"></i>
-                        <p class="text-muted">No upcoming predictions scheduled. Check back later!</p>
-                    </div>
-                `;
-                return;
-            }
-
-            predictions.forEach(prediction => {
-                const card = createPredictionCard(prediction, false);
-                upcomingPredictionsContainer.appendChild(card);
-            });
-        }
-
-        // Create prediction card
-        function createPredictionCard(prediction, isLive) {
-            const col = document.createElement('div');
-            col.className = 'col-md-6 col-lg-4 mb-4';
-
-            const card = document.createElement('div');
-            card.className = 'card h-100 prediction-card shadow-sm';
-            card.style.cursor = 'pointer';
-
-            // Card header
-            const cardHeader = document.createElement('div');
-            cardHeader.className = 'card-header d-flex justify-content-between align-items-center';
-            cardHeader.innerHTML = `
-                <div>
-                    <span class="badge bg-${getSportBadgeClass(prediction.sport)} me-1">${capitalizeFirstLetter(prediction.sport)}</span>
-                    ${isLive ? '<span class="badge bg-danger live-badge">LIVE</span>' : ''}
                 </div>
-                <small class="text-muted">${formatTime(prediction.startTime)}</small>
-            `;
+            </div>
 
-            // Card body
-            const cardBody = document.createElement('div');
-            cardBody.className = 'card-body';
-            cardBody.innerHTML = `
-                <h6 class="card-title">${prediction.teams}</h6>
-                <p class="card-text"><strong>${prediction.league}</strong></p>
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="badge bg-primary mt-2">${prediction.prediction}</span>
-                    <span class="badge bg-success mt-2">${prediction.outcome}</span>
-                    <span class="badge bg-primary mt-2" >${prediction.odds.toFixed(2)}</span>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar bg-${getConfidenceColor(prediction.confidence)}" 
-                         role="progressbar" 
-                         style="width: ${getConfidenceWidth(prediction.confidence)}%" 
-                         aria-valuenow="${getConfidenceWidth(prediction.confidence)}" 
-                         aria-valuemin="0" 
-                         aria-valuemax="100">
-                    </div>
-                </div>
-                <p class="small text-muted mb-0">Confidence: <strong>${prediction.confidence}</strong></p>
-            `;
+        </footer>
 
-            // Card footer
-            const cardFooter = document.createElement('div');
-            cardFooter.className = 'card-footer bg-transparent border-top-0';
-            cardFooter.innerHTML = `
-                <button class="btn btn-sm btn-outline-primary w-100 view-details-btn" data-id="${prediction.id}">
-                    <i class="fas fa-info-circle me-1"></i> View Details
-                </button>
-            `;
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/magnific-popup-options.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
 
-            card.appendChild(cardHeader);
-            card.appendChild(cardBody);
-            card.appendChild(cardFooter);
-            col.appendChild(card);
-
-            // Add click event to view details
-            col.querySelector('.view-details-btn').addEventListener('click', function (e) {
-                e.stopPropagation();
-                showPredictionDetails(prediction);
-            });
-
-            // Add click event to the whole card
-            card.addEventListener('click', function () {
-                showPredictionDetails(prediction);
-            });
-
-            return col;
-        }
-
-        // Show prediction details in modal
-        function showPredictionDetails(prediction) {
-            predictionModalTitle.textContent = `${prediction.teams} - ${prediction.league}`;
-
-            predictionModalBody.innerHTML = `
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <h6>Prediction</h6>
-                            <div class="d-flex align-items-center">
-                                <span class="badge bg-primary me-2">${prediction.prediction}</span>
-                                <span class="badge bg-success">${prediction.odds.toFixed(2)}</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <h6>Confidence</h6>
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar bg-${getConfidenceColor(prediction.confidence)}" 
-                                     role="progressbar" 
-                                     style="width: ${getConfidenceWidth(prediction.confidence)}%" 
-                                     aria-valuenow="${getConfidenceWidth(prediction.confidence)}" 
-                                     aria-valuemin="0" 
-                                     aria-valuemax="100">
-                                </div>
-                            </div>
-                            <p class="small text-muted mt-1">${prediction.confidence} Confidence</p>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <h6>Match Info</h6>
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Sport
-                                    <span class="badge bg-${getSportBadgeClass(prediction.sport)}">${capitalizeFirstLetter(prediction.sport)}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    League
-                                    <span>${prediction.league}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Status
-                                    <span class="badge ${prediction.status === 'live' ? 'bg-danger' : 'bg-secondary'}">${capitalizeFirstLetter(prediction.status)}</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Start Time
-                                    <span>${formatDateTime(prediction.startTime)}</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <h6>Expert Analysis</h6>
-                            <div class="card bg-light">
-                                <div class="card-body">
-                                    <p>${prediction.analysis}</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <h6>Recommended Bet</h6>
-                            <div class="card bg-light">
-                                <div class="card-body">
-                                    <p>We recommend betting <strong>2-3%</strong> of your bankroll on this prediction.</p>
-                                    <p class="small text-muted">Always gamble responsibly and never bet more than you can afford to lose.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="text-center">
-                            <button class="btn btn-primary me-2">
-                                <i class="fas fa-thumbs-up me-1"></i> Like Prediction
-                            </button>
-                            <button class="btn btn-outline-secondary">
-                                <i class="fas fa-bookmark me-1"></i> Save
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            predictionModal.show();
-        }
-
-        // Filter predictions by sport
-        function filterPredictionsBySport(sport) {
-            if (sport === 'all') {
-                renderLivePredictions(predictionsDatabase.live);
-                renderUpcomingPredictions(predictionsDatabase.upcoming);
-                return;
-            }
-
-            const filteredLive = predictionsDatabase.live.filter(p => p.sport === sport);
-            const filteredUpcoming = predictionsDatabase.upcoming.filter(p => p.sport === sport);
-
-            renderLivePredictions(filteredLive);
-            renderUpcomingPredictions(filteredUpcoming);
-        }
-
-        // Update live predictions (simulated)
-        function updateLivePredictions() {
-            // Simulate new predictions coming in
-            if (Math.random() > 0.7) {
-                const newPrediction = {
-                    id: Date.now(),
-                    sport: ['football', 'basketball', 'tennis'][Math.floor(Math.random() * 3)],
-                    league: ['Premier League', 'La Liga', 'Serie A', 'NBA', 'Euroleague', 'ATP Masters'][Math.floor(Math.random() * 6)],
-                    teams: ['Team A vs Team B', 'Team X vs Team Y', 'Player 1 vs Player 2'][Math.floor(Math.random() * 3)],
-                    prediction: ['Over 2.5 Goals', 'Home Win', 'Away Win +1.5', 'Under 3.5 Goals'][Math.floor(Math.random() * 4)],
-                    odds: (Math.random() * 2 + 1.5).toFixed(2),
-                    confidence: ['High', 'Medium', 'Low'][Math.floor(Math.random() * 3)],
-                    status: 'live',
-                    startTime: new Date(),
-                    analysis: 'This is a simulated live update. In a real application, this would be actual live data from the backend.'
-                };
-
-                predictionsDatabase.live.unshift(newPrediction);
-
-                // Limit to 5 live predictions
-                if (predictionsDatabase.live.length > 5) {
-                    predictionsDatabase.live.pop();
-                }
-
-                renderLivePredictions(predictionsDatabase.live);
-
-                // Show notification for new prediction
-                showToast(`New live prediction added: ${newPrediction.teams}`, 'info');
-            }
-
-            // Simulate some predictions ending
-            if (Math.random() > 0.8 && predictionsDatabase.live.length > 0) {
-                const endedPrediction = predictionsDatabase.live.pop();
-                showToast(`Prediction ended: ${endedPrediction.teams}`, 'warning');
-                renderLivePredictions(predictionsDatabase.live);
-            }
-        }
-
-        // Helper functions
-        function capitalizeFirstLetter(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-
-        function formatTime(date) {
-            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        }
-
-        function formatDateTime(date) {
-            return date.toLocaleString([], {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
-        }
-
-        function getSportBadgeClass(sport) {
-            switch (sport) {
-                case 'football': return 'info';
-                case 'basketball': return 'warning';
-                case 'tennis': return 'success';
-                default: return 'secondary';
-            }
-        }
-
-        function getConfidenceColor(confidence) {
-            switch (confidence.toLowerCase()) {
-                case 'very high': return 'success';
-                case 'high': return 'info';
-                case 'medium': return 'primary';
-                case 'low': return 'warning';
-                default: return 'secondary';
-            }
-        }
-
-        function getConfidenceWidth(confidence) {
-            switch (confidence.toLowerCase()) {
-                case 'very high': return 90;
-                case 'high': return 75;
-                case 'medium': return 60;
-                case 'low': return 40;
-                default: return 50;
-            }
-        }
-
-        function showToast(message, type) {
-            const toastContainer = document.createElement('div');
-            toastContainer.className = 'position-fixed bottom-0 end-0 p-3';
-            toastContainer.style.zIndex = '1100';
-
-            const toast = document.createElement('div');
-            toast.className = `toast show align-items-center text-white bg-${type === 'success' ? 'success' : type === 'error' ? 'danger' : type === 'warning' ? 'warning' : 'info'} border-0`;
-            toast.role = 'alert';
-            toast.ariaLive = 'assertive';
-            toast.ariaAtomic = 'true';
-
-            toast.innerHTML = `
-                <div class="d-flex">
-                    <div class="toast-body">
-                        ${message}
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-            `;
-
-            toastContainer.appendChild(toast);
-            document.body.appendChild(toastContainer);
-
-            // Auto remove after 5 seconds
-            setTimeout(() => {
-                toast.classList.remove('show');
-                setTimeout(() => {
-                    toastContainer.remove();
-                }, 300);
-            }, 5000);
-
-            // Close button
-            toast.querySelector('.btn-close').addEventListener('click', function () {
-                toast.classList.remove('show');
-                setTimeout(() => {
-                    toastContainer.remove();
-                }, 300);
-            });
-        }
-    </script>
-</body>
-
+    </body>
+    
 </html>
